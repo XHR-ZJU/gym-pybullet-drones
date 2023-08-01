@@ -15,7 +15,7 @@ class HoverAviary(BaseSingleAgentAviary):
                  physics: Physics=Physics.PYB,
                  freq: int=240,
                  aggregate_phy_steps: int=1,
-                 gui=False,
+                 gui=True,
                  record=False, 
                  obs: ObservationType=ObservationType.KIN,
                  act: ActionType=ActionType.RPM
@@ -72,7 +72,7 @@ class HoverAviary(BaseSingleAgentAviary):
 
         """
         state = self._getDroneStateVector(0)
-        return -1 * np.linalg.norm(np.array([0, 0, 1])-state[0:3])**2
+        return -1 * np.linalg.norm(np.array([0.0, 0.0, 2.0])-state[0:3])**2
 
     ################################################################################
     
