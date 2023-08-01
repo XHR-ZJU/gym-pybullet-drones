@@ -80,10 +80,10 @@ def run(
         os.makedirs(filename+'/')
 
     #### Print out current git commit hash #####################
-    if (platform == "linux" or platform == "darwin") and ('GITHUB_ACTIONS' not in os.environ.keys()):
-        git_commit = subprocess.check_output(["git", "describe", "--tags"]).strip()
-        with open(filename+'/git_commit.txt', 'w+') as f:
-            f.write(str(git_commit))
+    # if (platform == "linux" or platform == "darwin") and ('GITHUB_ACTIONS' not in os.environ.keys()):
+    #     git_commit = subprocess.check_output(["git", "describe", "--tags"]).strip()
+    #     with open(filename+'/git_commit.txt', 'w+') as f:
+    #         f.write(str(git_commit))
 
     #### Warning ###############################################
     if env == 'tune' and act != ActionType.TUN:

@@ -15,7 +15,7 @@ class HoverAviary(BaseSingleAgentAviary):
                  physics: Physics=Physics.PYB,
                  freq: int=240,
                  aggregate_phy_steps: int=1,
-                 gui=True,
+                 gui=False,
                  record=False, 
                  obs: ObservationType=ObservationType.KIN,
                  act: ActionType=ActionType.RPM
